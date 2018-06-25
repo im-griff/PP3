@@ -3,7 +3,7 @@
   <spriteName>spr_mouse</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-100</depth>
+  <depth>-999</depth>
   <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -61,6 +61,16 @@ if hover == false
 }
 x=mouse_x;
 y=mouse_y;
+
+if mouse_check_button(mb_left)
+{
+    image_index = 1;
+}
+else{
+
+image_index = 0;
+
+};
 </string>
           </argument>
         </arguments>

@@ -17,13 +17,10 @@
     <sound>sound\sd_eat6</sound>
   </sounds>
   <sprites name="sprites">
-    <sprite>sprites\spr_button</sprite>
-    <sprite>sprites\spr_buttonOptions</sprite>
-    <sprite>sprites\spr_bear</sprite>
-    <sprite>sprites\spr_black</sprite>
-    <sprite>sprites\spr_miscBound</sprite>
-    <sprite>sprites\spr_windowHover</sprite>
-    <sprite>sprites\spr_gui</sprite>
+    <sprites name="PowerUps">
+      <sprite>sprites\spr_magnet</sprite>
+      <sprite>sprites\spr_bomb</sprite>
+    </sprites>
     <sprites name="Env/Room">
       <sprite>sprites\spr_city</sprite>
       <sprite>sprites\spr_room</sprite>
@@ -38,10 +35,19 @@
       <sprite>sprites\spr_foodItem</sprite>
       <sprite>sprites\sprite16</sprite>
     </sprites>
-    <sprite>sprites\spr_magnet</sprite>
-    <sprite>sprites\spr_bomb</sprite>
-    <sprite>sprites\spr_mouse</sprite>
-    <sprite>sprites\spr_radius</sprite>
+    <sprites name="GUI">
+      <sprite>sprites\spr_gui</sprite>
+      <sprite>sprites\spr_Cataloguebox</sprite>
+      <sprite>sprites\spr_mouse</sprite>
+      <sprite>sprites\spr_button</sprite>
+      <sprite>sprites\spr_radius</sprite>
+      <sprite>sprites\spr_bear</sprite>
+      <sprite>sprites\spr_CatalogueButton</sprite>
+    </sprites>
+    <sprites name="Boundry">
+      <sprite>sprites\spr_black</sprite>
+      <sprite>sprites\spr_miscBound</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <backgrounds name="Cut Scenes">
@@ -56,6 +62,9 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_shopArray.gml</script>
+    <script>scripts\scr_GlobalVar.gml</script>
+    <script>scripts\scr_DebugControls.gml</script>
+    <script>scripts\scr_Catalouge.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\ft_button</font>
@@ -75,6 +84,8 @@
       <object>objects\o_magnet</object>
       <object>objects\o_bomb</object>
       <object>objects\o_cursor</object>
+      <object>objects\o_catalougebox</object>
+      <object>objects\o_cataloguebutton</object>
     </objects>
     <objects name="GAMEPLAY">
       <object>objects\o_bear</object>
@@ -119,8 +130,8 @@
     <room>rooms\rm_game</room>
     <rooms name="disabled">
       <room>rooms\rm_menu</room>
-      <room>rooms\rm_cutscenes</room>
       <room>rooms\rm_options</room>
+      <room>rooms\rm_cutscenes</room>
     </rooms>
   </rooms>
   <help>

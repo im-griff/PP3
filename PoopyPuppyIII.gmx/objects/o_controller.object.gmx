@@ -11,36 +11,41 @@
     <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>601</id>
+        <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>1</kind>
-            <string>///MASTER VARS
-global.cutscene = 0;
-global.day = true;
-global.paused = false;
-globalvar gameStart;
-gameStart = true;
-
-global.treat = 0;
-global.bark = 0;
-global.gold = 0;
-
-global.treatType = o_treat_1a;
-
-globalvar tps;
-tps = 0;
-</string>
+            <kind>9</kind>
+            <script>scr_GlobalVar</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
@@ -62,8 +67,7 @@ tps = 0;
             <kind>1</kind>
             <string>///ACTIONS
 
-//Here are all of the (passive and immediate) effects
-//controlled by the buttons.
+/*Here are all of the (passive and immediate) effects controlled by the buttons*/
 
 
 </string>
@@ -101,12 +105,14 @@ draw_text(view_wview/2,58,global.treat);
 draw_set_color(c_black);
 draw_set_font(ft_gui);
 draw_set_halign(fa_center);
-draw_text(view_wview/2,100,"Treats/sec: "+string(tps));
+draw_text(view_wview/2,100,"Treats/sec: "+string(global.tps));
 
 draw_set_color(c_black);
 draw_set_font(ft_gui);
 draw_set_halign(fa_center);
-draw_text(2,100,"gameStart"+string(gameStart));
+draw_text(2,100,"gameStart"+string(global.gameStart));
+
+
 </string>
           </argument>
         </arguments>
@@ -129,6 +135,7 @@ draw_text(2,100,"gameStart"+string(gameStart));
             <kind>1</kind>
             <string>///Draw Icons
 draw_sprite(spr_magnet,1,view_xview+32,view_yview-256);
+
 </string>
           </argument>
         </arguments>
