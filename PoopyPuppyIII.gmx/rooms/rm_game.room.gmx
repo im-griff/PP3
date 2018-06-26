@@ -84,7 +84,8 @@
     <instance objName="o_gui" x="320" y="256" name="inst_9DF915D9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_cursor" x="64" y="96" name="inst_335AA030" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_catalougebox" x="768" y="320" name="inst_34BA6539" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="o_cataloguebutton" x="416" y="256" name="inst_C5974224" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_testbutton" x="416" y="256" name="inst_C5974224" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_controller" x="928" y="-672" name="inst_7CC4EF50" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>-1</PhysicsWorld>

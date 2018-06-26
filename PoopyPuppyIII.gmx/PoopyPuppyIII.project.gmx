@@ -42,7 +42,7 @@
       <sprite>sprites\spr_button</sprite>
       <sprite>sprites\spr_radius</sprite>
       <sprite>sprites\spr_bear</sprite>
-      <sprite>sprites\spr_CatalogueButton</sprite>
+      <sprite>sprites\spr_TestButton</sprite>
     </sprites>
     <sprites name="Boundry">
       <sprite>sprites\spr_black</sprite>
@@ -64,7 +64,9 @@
     <script>scripts\scr_shopArray.gml</script>
     <script>scripts\scr_GlobalVar.gml</script>
     <script>scripts\scr_DebugControls.gml</script>
-    <script>scripts\scr_Catalouge.gml</script>
+    <script>scripts\scr_Strings.gml</script>
+    <script>scripts\scr_Buttons.gml</script>
+    <script>scripts\scr_Doginit.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\ft_button</font>
@@ -74,6 +76,7 @@
     <font>fonts\ft_store_desc</font>
   </fonts>
   <objects name="objects">
+    <object>objects\o_collisiontest</object>
     <object>objects\o_controller</object>
     <object>objects\o_cutscene</object>
     <object>objects\o_treatSpawner</object>
@@ -85,7 +88,7 @@
       <object>objects\o_bomb</object>
       <object>objects\o_cursor</object>
       <object>objects\o_catalougebox</object>
-      <object>objects\o_cataloguebutton</object>
+      <object>objects\o_testbutton</object>
     </objects>
     <objects name="GAMEPLAY">
       <object>objects\o_bear</object>

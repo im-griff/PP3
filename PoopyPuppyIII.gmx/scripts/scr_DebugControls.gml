@@ -4,14 +4,14 @@
 
 */
 
-/*switch (keyboard_key)
+switch (keyboard_key)
     {
-        case ord(''):
-            
+        case (vk_add):
+            Tps += 10
         break;
         
-        case ord(''):
-            
+        case (vk_subtract):
+            Tps -= 10
         break;
     };
 

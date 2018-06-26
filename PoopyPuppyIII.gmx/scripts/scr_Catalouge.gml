@@ -1,2 +1,3 @@
-draw_set_colour(c_yellow);
-draw_rectangle(100, 100, 300, 200, false);
+// This is what allows the catalouge to be opened and controlled
+o_catalougebox.depth = -99;
+o_catalougebox.visible = true

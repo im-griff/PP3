@@ -104,7 +104,7 @@ switch (object)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.treat += treatValue;
+            <string>global.Treat += treatValue;
 
 eat = choose(1,2,3,4,5,6)
 {

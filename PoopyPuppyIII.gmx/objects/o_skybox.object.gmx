@@ -194,7 +194,7 @@ image_speed = 0.1;
           <argument>
             <kind>1</kind>
             <string>///Fade
-switch (global.day)
+switch (global.Day)
 {
     case 1:
     if image_index &gt;= 29
@@ -208,7 +208,7 @@ switch (global.day)
 
 if fadeToNight == true{
     //Start of night
-    global.day = false;
+    global.Day = false;
     
     if image_alpha &gt; 0  {image_alpha -= 0.005;}
     if image_alpha == 0 {fadeToNight = false;}
@@ -216,7 +216,7 @@ if fadeToNight == true{
 
 if fadeToDay == true{
     //Start of day
-    global.day = true;
+    global.Day = true;
     fadeToNight= false;
     image_index = 0;
     if image_alpha &lt; 1  {image_alpha += 0.01;}

@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="2" enumb="0">
+    <event eventtype="3" enumb="2">
       <action>
         <libid>1</libid>
         <id>605</id>
@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>Treat timer</string>
+            <string>Inprogress</string>
           </argument>
         </arguments>
       </action>
@@ -45,30 +45,27 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Spawn Treat
-instance_create(random_range(view_xview+16,view_xview+1240),16,o_treat_1a);
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Reset timer
-alarm[0] = 60/(Tps); //translate tps to tick speed
+            <string>//Not working right
+if (collision_circle( o_bear.x - 70, o_bear.y - 30, 50, par_treat, true, false))
+    {   
+        global.Treat += par_treat.treatValue;
+        treatId = instance_nearest(o_bear.x - 70,o_bear.y - 30,par_treat);
+            {
+                switch (choose(1,2,3,4,5,6))
+                    {
+                        case 1: audio_play_sound(sd_eat1,1,0); break;
+                        case 2: audio_play_sound(sd_eat2,1,0); break;
+                        case 3: audio_play_sound(sd_eat3,1,0); break;
+                        case 4: audio_play_sound(sd_eat4,1,0); break;
+                        case 5: audio_play_sound(sd_eat5,1,0); break;
+                        case 6: audio_play_sound(sd_eat6,1,0); break;
+                }
+        }
+        instance_destroy(treatId);
+};
+
+
+
 </string>
           </argument>
         </arguments>
@@ -77,9 +74,9 @@ alarm[0] = 60/(Tps); //translate tps to tick speed
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
-        <id>611</id>
-        <kind>6</kind>
-        <userelative>-1</userelative>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
@@ -91,11 +88,31 @@ alarm[0] = 60/(Tps); //translate tps to tick speed
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>treat</string>
+            <string></string>
           </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
           <argument>
-            <kind>0</kind>
-            <string>true</string>
+            <kind>1</kind>
+            <string>draw_set_colour(c_red);
+draw_circle(o_bear.x - 70, o_bear.y - 30, 60, true);
+</string>
           </argument>
         </arguments>
       </action>
