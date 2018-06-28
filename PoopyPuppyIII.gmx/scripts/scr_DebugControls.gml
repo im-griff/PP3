@@ -4,7 +4,7 @@
 
 */
 
-switch (keyboard_key)
+switch (keyboard_check_pressed(keyboard_key))
     {
         case (vk_add):
             Tps += 10
