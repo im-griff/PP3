@@ -6,7 +6,37 @@
 3   MUTLIPIER
 4   *Max (if buying multiple)
 */
+/* This is an enumeration example in case you want to use enum instead of arrays
 
+// Upgrade barking power
+enum Bark
+    {
+        name = "Normal Bark",
+        desc = "",
+        cost = 0,
+        muply = 1,
+}
+enum Bark2
+    {
+        name = "Loud Bark",
+        desc = "",
+        cost = 5,
+        muply = 2,
+}
+enum Bark3
+    {
+        name = "Sonic Bark",
+        desc = "",
+        cost = 20,
+        muply = 3,
+}
+
+To call enums you would type in Bark2.name
+This would display the string "Loud Bark"
+Enums are always global
+Enum values cannot be changed after initialization
+
+*/
 // [0-4] Upgrade barking power
 global.shopArray[0,0] = "Loud Bark"; //Name
 global.shopArray[0,1] = ""; //Description

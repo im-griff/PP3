@@ -4,14 +4,11 @@
 
 */
 
-/*switch (keyboard_key)
-    {
-        case ord(''):
-            
-        break;
-        
-        case ord(''):
-            
-        break;
-    };
+if (keyboard_check_pressed(vk_add)){
+    Tps += 10
+}
+
+if (keyboard_check_pressed(vk_subtract)){
+    Tps -= 10
+}
 

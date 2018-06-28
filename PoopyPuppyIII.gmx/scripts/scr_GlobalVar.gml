@@ -1,17 +1,24 @@
+#define scr_GlobalVar
 ///GlobalVar
-global.cutscene = 0;
-global.day = true;
-global.paused = false;
-globalvar gameStart;
-gameStart = true;
+global.Cutscene = 0;
+global.Day = true;
+global.Paused = false;
+globalvar GameStart;
+GameStart = true;
 
 
-global.treat = 0;
-global.bark = 0;
-global.gold = 0;
+global.Treat = 0;
+global.Bark = 0;
+global.Gold = 0;
 
-global.treatType = o_treat_1a;
+global.TreatType = o_treat_1a;
 
-globalvar tps;
-tps = 0;
+globalvar Tps;
+Tps = 0;
 ;
+
+#define scr_tpsmin
+if tps < 0
+    {
+        tps = 0;
+};

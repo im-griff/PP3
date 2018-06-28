@@ -33,7 +33,7 @@
     </sprites>
     <sprites name="food">
       <sprite>sprites\spr_foodItem</sprite>
-      <sprite>sprites\sprite16</sprite>
+      <sprite>sprites\spr_foodItem_downsized</sprite>
     </sprites>
     <sprites name="GUI">
       <sprite>sprites\spr_gui</sprite>
@@ -42,7 +42,8 @@
       <sprite>sprites\spr_button</sprite>
       <sprite>sprites\spr_radius</sprite>
       <sprite>sprites\spr_bear</sprite>
-      <sprite>sprites\spr_CatalogueButton</sprite>
+      <sprite>sprites\spr_TestButton</sprite>
+      <sprite>sprites\spr_button_treat</sprite>
     </sprites>
     <sprites name="Boundry">
       <sprite>sprites\spr_black</sprite>
@@ -64,7 +65,9 @@
     <script>scripts\scr_shopArray.gml</script>
     <script>scripts\scr_GlobalVar.gml</script>
     <script>scripts\scr_DebugControls.gml</script>
-    <script>scripts\scr_Catalouge.gml</script>
+    <script>scripts\scr_Strings.gml</script>
+    <script>scripts\scr_Buttons.gml</script>
+    <script>scripts\scr_Doginit.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\ft_button</font>
@@ -74,24 +77,28 @@
     <font>fonts\ft_store_desc</font>
   </fonts>
   <objects name="objects">
+    <object>objects\o_gui</object>
     <object>objects\o_controller</object>
     <object>objects\o_cutscene</object>
     <object>objects\o_treatSpawner</object>
+    <object>objects\o_collisiontest</object>
     <objects name="GUI">
-      <object>objects\o_gui</object>
-      <object>objects\o_buttonOptions</object>
-      <object>objects\o_button</object>
-      <object>objects\o_magnet</object>
-      <object>objects\o_bomb</object>
-      <object>objects\o_cursor</object>
-      <object>objects\o_catalougebox</object>
-      <object>objects\o_cataloguebutton</object>
+      <objects name="icons">
+        <object>objects\o_bomb</object>
+        <object>objects\o_magnet</object>
+        <object>objects\o_testbutton</object>
+      </objects>
+      <objects name="buttons">
+        <object>objects\o_button</object>
+        <object>objects\o_button_treat</object>
+      </objects>
+      <objects name="misc">
+        <object>objects\o_hud</object>
+        <object>objects\o_cursor</object>
+        <object>objects\o_catalougebox</object>
+      </objects>
     </objects>
     <objects name="GAMEPLAY">
-      <object>objects\o_bear</object>
-      <object>objects\o_room</object>
-      <object>objects\o_plant</object>
-      <object>objects\spr_mouth</object>
       <objects name="Treats">
         <object>objects\par_treat</object>
         <object>objects\o_treat_1a</object>
@@ -105,6 +112,11 @@
         <object>objects\o_treat_3c</object>
         <object>objects\o_treat_3d</object>
       </objects>
+      <object>objects\o_bear</object>
+      <object>objects\o_plant</object>
+      <object>objects\spr_mouth</object>
+      <object>objects\o_room</object>
+      <object>objects\o_block</object>
       <objects name="Posters">
         <object>objects\o_poster</object>
         <object>objects\o_poster_22jumpstreet</object>
@@ -116,7 +128,6 @@
         <object>objects\o_skybox</object>
         <object>objects\o_skyboxNight</object>
       </objects>
-      <object>objects\o_block</object>
     </objects>
     <objects name="Debug">
       <object>objects\o_miscBound</object>
@@ -129,8 +140,6 @@
   <rooms name="rooms">
     <room>rooms\rm_game</room>
     <rooms name="disabled">
-      <room>rooms\rm_menu</room>
-      <room>rooms\rm_options</room>
       <room>rooms\rm_cutscenes</room>
     </rooms>
   </rooms>

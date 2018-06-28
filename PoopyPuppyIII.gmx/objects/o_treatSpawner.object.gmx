@@ -25,6 +25,54 @@
         <arguments>
           <argument>
             <kind>1</kind>
+            <string></string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Starting treats
+crunchy_bone=0;
+crunchy_bone_golden=0;
+
+dental_chews=0;
+dental_chews_golden=0;
+
+/*These are the inventories of the buttons on main HUD
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>605</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>Treat timer</string>
           </argument>
         </arguments>
@@ -68,8 +116,34 @@ instance_create(random_range(view_xview+16,view_xview+1240),16,o_treat_1a);
           <argument>
             <kind>1</kind>
             <string>///Reset timer
-alarm[0] = 60/(tps); //translate tps to tick speed
+alarm[0] = 60/(Tps); //translate tps to tick speed
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>treat</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>true</string>
           </argument>
         </arguments>
       </action>
