@@ -76,28 +76,6 @@ switch (object)
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="par_treat">
-      <action>
-        <libid>1</libid>
-        <id>605</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>call</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="4" ename="spr_mouth">
       <action>
         <libid>1</libid>
@@ -166,6 +144,28 @@ eat = choose(1,2,3,4,5,6)
           <argument>
             <kind>1</kind>
             <string>call event</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="par_treat">
+      <action>
+        <libid>1</libid>
+        <id>605</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>call</string>
           </argument>
         </arguments>
       </action>
