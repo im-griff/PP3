@@ -15,6 +15,7 @@
     <sound>sound\sd_eat4</sound>
     <sound>sound\sd_eat5</sound>
     <sound>sound\sd_eat6</sound>
+    <sound>sound\sd_pageturn</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="PowerUps">
@@ -42,8 +43,12 @@
       <sprite>sprites\spr_button</sprite>
       <sprite>sprites\spr_radius</sprite>
       <sprite>sprites\spr_bear</sprite>
+      <sprite>sprites\spr_par_dog</sprite>
       <sprite>sprites\spr_TestButton</sprite>
       <sprite>sprites\spr_button_treat</sprite>
+      <sprite>sprites\spr_item</sprite>
+      <sprite>sprites\spr_button_arrow</sprite>
+      <sprite>sprites\spr_catalouge</sprite>
     </sprites>
     <sprites name="Boundry">
       <sprite>sprites\spr_black</sprite>
@@ -59,15 +64,18 @@
       <background>background\bg_scene_1_sky</background>
       <background>background\bg_scene_2_sky</background>
     </backgrounds>
+    <background>background\bg_floor</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\scr_shopArray.gml</script>
-    <script>scripts\scr_GlobalVar.gml</script>
-    <script>scripts\scr_DebugControls.gml</script>
-    <script>scripts\scr_Strings.gml</script>
-    <script>scripts\scr_Buttons.gml</script>
-    <script>scripts\scr_Doginit.gml</script>
+    <script>scripts\scr_shop_array.gml</script>
+    <script>scripts\scr_Global_var.gml</script>
+    <script>scripts\scr_debug_controls.gml</script>
+    <script>scripts\scr_strings.gml</script>
+    <script>scripts\scr_buttons.gml</script>
+    <script>scripts\scr_dog_init.gml</script>
+    <script>scripts\scr_step_check.gml</script>
+    <script>scripts\scr_dog_spawn.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\ft_button</font>
@@ -81,7 +89,6 @@
     <object>objects\o_controller</object>
     <object>objects\o_cutscene</object>
     <object>objects\o_treatSpawner</object>
-    <object>objects\o_collisiontest</object>
     <objects name="GUI">
       <objects name="icons">
         <object>objects\o_bomb</object>
@@ -96,9 +103,14 @@
         <object>objects\o_hud</object>
         <object>objects\o_cursor</object>
         <object>objects\o_catalougebox</object>
+        <object>objects\o_catalouge</object>
       </objects>
     </objects>
     <objects name="GAMEPLAY">
+      <objects name="playable dogs">
+        <object>objects\o_par_dog</object>
+        <object>objects\o_bear</object>
+      </objects>
       <objects name="Treats">
         <object>objects\par_treat</object>
         <object>objects\o_treat_1a</object>
@@ -112,9 +124,8 @@
         <object>objects\o_treat_3c</object>
         <object>objects\o_treat_3d</object>
       </objects>
-      <object>objects\o_bear</object>
       <object>objects\o_plant</object>
-      <object>objects\spr_mouth</object>
+      <object>objects\o_mouth</object>
       <object>objects\o_room</object>
       <object>objects\o_block</object>
       <objects name="Posters">
@@ -139,6 +150,7 @@
   </timelines>
   <rooms name="rooms">
     <room>rooms\rm_game</room>
+    <room>rooms\rm_catalogue</room>
     <rooms name="disabled">
       <room>rooms\rm_cutscenes</room>
     </rooms>

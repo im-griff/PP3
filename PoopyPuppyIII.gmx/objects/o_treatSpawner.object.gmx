@@ -125,9 +125,9 @@ alarm[0] = 60/(Tps); //translate tps to tick speed
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
-        <id>611</id>
-        <kind>6</kind>
-        <userelative>-1</userelative>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
@@ -139,11 +139,13 @@ alarm[0] = 60/(Tps); //translate tps to tick speed
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>treat</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>true</string>
+            <string>///tick per second control
+if (Tps == 0.01)
+    {
+        Tps = 0.5;
+        o_treatSpawner.alarm[0] = 60/(Tps); //treats per 60 ticks
+}
+</string>
           </argument>
         </arguments>
       </action>

@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -46,7 +46,90 @@
           <argument>
             <kind>1</kind>
             <string>///Button creation
-script_execute(scr_button_create, 1216, 256, 1, "test", 0, 0, true)
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Draw GUI based on room
+switch (room)
+{
+case rm_game:
+    draw_set_font(ft_guiLarge);
+    draw_set_halign(fa_center);
+    draw_set_color(c_black);
+    draw_text((view_wview/2)+4,12,global.Treat);
+    draw_set_color(c_white);
+    draw_text((view_wview/2),8,global.Treat);
+
+    draw_set_color(c_black);
+    draw_set_font(ft_gui);
+    draw_set_halign(fa_center);
+    draw_text(view_wview/2,100,"Treats/sec: "+string(Tps));
+    
+    draw_set_color(c_black);
+    draw_set_font(ft_gui);
+    draw_set_halign(fa_center);
+    draw_text(2,100,"gameStart"+string(global.GameStart));
+    break;
+
+case rm_catalogue:
+draw_set_color(c_black);
+    draw_set_font(ft_gui);
+    draw_set_halign(fa_center);
+    draw_text(view_wview/2,32,"Wallet: $100");
+    
+    break;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+
+draw_healthbar(1280, 700, 1300, 800, global.Dog_stress, c_black, c_ltgray, c_ltgray, 3, true, false);
+
+draw_healthbar(1310, 700, 1330, 800, global.Dog_heat, c_black, c_red, c_red, 3, true, false);
+
+draw_healthbar(1340, 700, 1360, 800, global.Dog_toxic, c_black, c_green, c_green, 3, true, false);
+
 </string>
           </argument>
         </arguments>

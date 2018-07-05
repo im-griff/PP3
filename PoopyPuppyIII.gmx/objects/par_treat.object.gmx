@@ -76,7 +76,7 @@ switch (object)
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="spr_mouth">
+    <event eventtype="4" ename="o_mouth">
       <action>
         <libid>1</libid>
         <id>203</id>

@@ -1,4 +1,4 @@
-#define scr_Buttons
+#define scr_buttons
 // Each button instance will have an instance varible called ButtonType
 
 if place_meeting(x, y, o_cursor)
@@ -46,7 +46,7 @@ if place_meeting(x, y, o_cursor)
 }
 
 #define scr_button_create
-///scr_button_create, x, y, buttontype, "button_name", sprite_index, image_index, button_sprite, excecute_draw)
+///scr_button_create, x, y, buttontype, mask_index, draw_type, excecute_draw)
 var button_count;
 var button_id;
 
@@ -57,10 +57,9 @@ button_count = instance_number(o_testbutton);
 with (button_id)
     {
         buttontype = argument2;
-        button_name = argument3;
-        image_index = argument4;
-        draw_type = argument5;
-        execute_draw = argument6;
+        mask_index = argument3;
+        draw_type = argument4;
+        execute_draw = argument5;
 };
 
 
@@ -68,14 +67,8 @@ with (button_id)
 #define scr_buttoninit
 ///
 buttontype = 0;
-button_name = "none";
-button_sprite = "none";
-draw_type = 0
+draw_type = 0;
 execute_draw = false;
- 
-
-
-
 
 #define scr_draw_button
 ////Button draw script
@@ -123,6 +116,21 @@ if (execute_draw)
 
 
 #define scr_open_catalogue
-// This is what allows the catalogue to be opened and controlled
+/* This is what allows the catalogue to be opened and controlled
 o_catalougebox.depth = -99;
 o_catalougebox.visible = true
+*/
+
+
+switch (room)
+{
+    case rm_game:
+    
+        room_goto(rm_catalogue);
+        break;
+        
+    case rm_catalogue:
+    
+        room_goto(rm_game);
+        break;
+}

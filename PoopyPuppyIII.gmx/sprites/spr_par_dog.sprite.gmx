@@ -20,9 +20,9 @@
   <width>256</width>
   <height>160</height>
   <frames>
-    <frame index="0">images\spr_bear_0.png</frame>
-    <frame index="1">images\spr_bear_1.png</frame>
-    <frame index="2">images\spr_bear_2.png</frame>
-    <frame index="3">images\spr_bear_3.png</frame>
+    <frame index="0">images\spr_par_dog_0.png</frame>
+    <frame index="1">images\spr_par_dog_1.png</frame>
+    <frame index="2">images\spr_par_dog_2.png</frame>
+    <frame index="3">images\spr_par_dog_3.png</frame>
   </frames>
 </sprite>
